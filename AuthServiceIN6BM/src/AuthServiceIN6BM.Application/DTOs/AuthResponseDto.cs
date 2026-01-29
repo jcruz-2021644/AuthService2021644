@@ -2,12 +2,15 @@ namespace AuthServiceIN6BM.Application.DTOs;
 
 public class AuthResponseDto
 {
-    public string Id { get; set; } = string.Empty;
-    public string Username { get; set; } = string.Empty;
+    public bool Success {get;set;} = false;
 
-    public string ProfilePricture { get; set; } = string.Empty;
+    
+    public string Message { get; set; } = string.Empty;
+    public string Token { get; set; } = string.Empty;
 
-    public string Role { get; set; } = string.Empty;
+    public UserDetailsDto UserDetails { get; set; } = new();
+
+    public DateTime ExpireAt { get; set; }
 
 
 }
