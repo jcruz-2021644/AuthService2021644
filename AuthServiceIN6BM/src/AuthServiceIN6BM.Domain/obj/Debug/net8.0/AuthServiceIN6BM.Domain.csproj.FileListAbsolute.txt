@@ -9,3 +9,15 @@ C:\Users\Informatica\Desktop\AuthServiceIN6BM\src\AuthServiceIN6BM.Domain\obj\De
 C:\Users\Informatica\Desktop\AuthServiceIN6BM\src\AuthServiceIN6BM.Domain\obj\Debug\net8.0\refint\AuthServiceIN6BM.Domain.dll
 C:\Users\Informatica\Desktop\AuthServiceIN6BM\src\AuthServiceIN6BM.Domain\obj\Debug\net8.0\AuthServiceIN6BM.Domain.pdb
 C:\Users\Informatica\Desktop\AuthServiceIN6BM\src\AuthServiceIN6BM.Domain\obj\Debug\net8.0\ref\AuthServiceIN6BM.Domain.dll
+C:\AuthService2021644\AuthServiceIN6BM\src\AuthServiceIN6BM.Domain\bin\Debug\net8.0\AuthServiceIN6BM.Domain.deps.json
+C:\AuthService2021644\AuthServiceIN6BM\src\AuthServiceIN6BM.Domain\bin\Debug\net8.0\AuthServiceIN6BM.Domain.dll
+C:\AuthService2021644\AuthServiceIN6BM\src\AuthServiceIN6BM.Domain\bin\Debug\net8.0\AuthServiceIN6BM.Domain.pdb
+C:\AuthService2021644\AuthServiceIN6BM\src\AuthServiceIN6BM.Domain\obj\Debug\net8.0\AuthServiceIN6BM.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\AuthService2021644\AuthServiceIN6BM\src\AuthServiceIN6BM.Domain\obj\Debug\net8.0\AuthServiceIN6BM.Domain.AssemblyInfoInputs.cache
+C:\AuthService2021644\AuthServiceIN6BM\src\AuthServiceIN6BM.Domain\obj\Debug\net8.0\AuthServiceIN6BM.Domain.AssemblyInfo.cs
+C:\AuthService2021644\AuthServiceIN6BM\src\AuthServiceIN6BM.Domain\obj\Debug\net8.0\AuthServiceIN6BM.Domain.csproj.CoreCompileInputs.cache
+C:\AuthService2021644\AuthServiceIN6BM\src\AuthServiceIN6BM.Domain\obj\Debug\net8.0\AuthServiceIN6BM.Domain.sourcelink.json
+C:\AuthService2021644\AuthServiceIN6BM\src\AuthServiceIN6BM.Domain\obj\Debug\net8.0\AuthServiceIN6BM.Domain.dll
+C:\AuthService2021644\AuthServiceIN6BM\src\AuthServiceIN6BM.Domain\obj\Debug\net8.0\refint\AuthServiceIN6BM.Domain.dll
+C:\AuthService2021644\AuthServiceIN6BM\src\AuthServiceIN6BM.Domain\obj\Debug\net8.0\AuthServiceIN6BM.Domain.pdb
+C:\AuthService2021644\AuthServiceIN6BM\src\AuthServiceIN6BM.Domain\obj\Debug\net8.0\ref\AuthServiceIN6BM.Domain.dll

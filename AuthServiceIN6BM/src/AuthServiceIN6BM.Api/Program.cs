@@ -64,9 +64,9 @@ app.UseSecurityHeaders(policies => policies
 // Core middLewares
 app.UseHttpsRedirection();
 app.UserCors("DefaultCorsPolicy");
-app.UserRateLimiter();
-app.UserAuthentication();
-app.UserAuthorization();
+ //   app.UserRateLimiter();
+ //   app.UserAuthentication();
+ //   app.UserAuthorization();
 app.MapControllers();
 app.MapHelthChechks("/health");
 

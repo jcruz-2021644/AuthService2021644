@@ -1,5 +1,5 @@
 namespace AuthServiceIN6BM.Application.Interfaces;
-public interface IFieldData
+public interface IFileData
 {
     byte[] Data {get;}
     string ContentType {get;}

@@ -7,7 +7,7 @@ namespace AuthServiceIN6BM.Api.Extensions;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddApplicationService(this IserviceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddApplicationService(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContext<ApplicationDBContext>(options => options.UserNpgsql(configuration.GetConnectionString("DefaultConnection"))
         .UseSnakeCaseNamingConvetions());
@@ -19,7 +19,7 @@ public static class ServiceCollectionExtensions
 
         return services;
     }
-    public static IserviceCollection AddApiDocumentation(this IServiceCollection services)
+    public static IServiceCollection AddApiDocumentation(this IServiceCollection services)
     {
         services.AddEnpointsApiExplorer();
         services.AddSwaggerGen();
