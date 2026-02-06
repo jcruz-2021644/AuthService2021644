@@ -427,3 +427,21 @@ ORDER BY migration_id; {"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkC
 [2026-02-06 11:12:39 INF] Database ready. Running seed data... {"SourceContext":"Program"}
 [2026-02-06 11:12:40 INF] Database initialization completed successfully {"SourceContext":"Program"}
 [2026-02-06 11:12:40 INF] AuthService API is running at http://localhost:5108. Health endpoint: http://localhost:5108/health {"SourceContext":"Program"}
+[2026-02-06 11:28:28 WRN] Failed to determine the https port for redirect. {"EventId":{"Id":3,"Name":"FailedToDeterminePort"},"SourceContext":"Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware","RequestId":"0HNJ5KKI4KCQ5:00000001","RequestPath":"/api/v1/register","ConnectionId":"0HNJ5KKI4KCQ5"}
+[2026-02-06 11:28:28 INF] HTTP GET /api/v1/register responded 404 in 88.2536 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5KKI4KCQ5:00000001","ConnectionId":"0HNJ5KKI4KCQ5"}
+[2026-02-06 11:39:20 INF] Checking database connection... {"SourceContext":"Program"}
+[2026-02-06 11:39:21 INF] Database ready. Running seed data... {"SourceContext":"Program"}
+[2026-02-06 11:39:21 INF] Database initialization completed successfully {"SourceContext":"Program"}
+[2026-02-06 11:39:21 INF] AuthService API is running at http://localhost:5108. Health endpoint: http://localhost:5108/health {"SourceContext":"Program"}
+[2026-02-06 11:40:30 WRN] Failed to determine the https port for redirect. {"EventId":{"Id":3,"Name":"FailedToDeterminePort"},"SourceContext":"Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware","RequestId":"0HNJ5KR9A22L2:00000001","RequestPath":"/","ConnectionId":"0HNJ5KR9A22L2"}
+[2026-02-06 11:40:30 INF] HTTP GET / responded 404 in 68.4685 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5KR9A22L2:00000001","ConnectionId":"0HNJ5KR9A22L2"}
+[2026-02-06 11:41:13 INF] HTTP GET /api/v1/register responded 404 in 1.3927 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5KR9A22L5:00000001","ConnectionId":"0HNJ5KR9A22L5"}
+[2026-02-06 11:41:27 INF] HTTP GET /health responded 200 in 158.1953 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5KR9A22L2:00000002","ConnectionId":"0HNJ5KR9A22L2"}
+[2026-02-06 11:41:27 INF] HTTP GET /favicon.ico responded 404 in 0.1779 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5KR9A22L2:00000003","ConnectionId":"0HNJ5KR9A22L2"}
+[2026-02-06 11:43:39 INF] HTTP GET /api/v1/register responded 404 in 0.1426 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5KR9A22L7:00000001","ConnectionId":"0HNJ5KR9A22L7"}
+[2026-02-06 11:43:41 INF] HTTP GET /api/v1/register responded 404 in 0.1058 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5KR9A22L7:00000002","ConnectionId":"0HNJ5KR9A22L7"}
+[2026-02-06 11:43:42 INF] HTTP GET /api/v1/register responded 404 in 0.1112 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5KR9A22L7:00000003","ConnectionId":"0HNJ5KR9A22L7"}
+[2026-02-06 11:44:37 INF] HTTP POST /api/v1/register responded 404 in 0.1567 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5KR9A22L7:00000004","ConnectionId":"0HNJ5KR9A22L7"}
+[2026-02-06 11:45:01 INF] HTTP POST /api/v1/register responded 404 in 0.2545 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5KR9A22L7:00000005","ConnectionId":"0HNJ5KR9A22L7"}
+[2026-02-06 11:45:49 INF] HTTP POST /api/v1/register responded 404 in 0.1302 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5KR9A22L7:00000006","ConnectionId":"0HNJ5KR9A22L7"}
+[2026-02-06 11:46:12 INF] HTTP POST /api/v1/register responded 404 in 0.1218 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5KR9A22L7:00000007","ConnectionId":"0HNJ5KR9A22L7"}
