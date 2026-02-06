@@ -37,7 +37,7 @@ public static partial class LoggerExtensions
            Level = LogLevel.Warning,
            Message = "Registration rejected: email alredy exists"
        )]
-    public static partial void LogREgistrartionWhitExistingEmail(this ILogger logger);
+    public static partial void LogRegistrationWithExistingEmail(this ILogger logger);
 
     [LoggerMessage(
            EventId = 1005,
@@ -45,7 +45,7 @@ public static partial class LoggerExtensions
            Level = LogLevel.Warning,
            Message = "Registration rejected: username alredy exists"
        )]
-    public static partial void LogREgistrartionWhitExistingUsername(this ILogger logger);
+    public static partial void LogRegistrationWithExistingUsername(this ILogger logger);
     [LoggerMessage(
     EventId = 1006,
     /*metodo e nivel de solamente informacion*/

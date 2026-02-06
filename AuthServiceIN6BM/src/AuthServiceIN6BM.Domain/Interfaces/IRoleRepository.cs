@@ -7,12 +7,12 @@ public interface IRoleRepository
     Task<Role?> GetByNameAsync(string name);
 
     /*contar usuraios con un determinado rol*/
-    Task<int> CountUserInRoleAsync(string roleName);
+    Task<int> CountUsersInRoleAsync(string roleName);
 
     /*lista de solo lectura de tipo usuarios*/
     Task<IReadOnlyList<User>> GetUsersByRoleAsync(string roleName);
 
     /*lista de solo lectura buscamos un usurio y nos da todos los roles que el tiene */
-    Task<IReadOnlyList<string>> GetUserRoleNameAsync(string userId);
+    Task<IReadOnlyList<string>> GetUserRoleNamesAsync(string userId);
 
 }

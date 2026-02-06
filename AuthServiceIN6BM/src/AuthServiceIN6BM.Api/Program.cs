@@ -1,4 +1,5 @@
 using AuthServiceIN6BM.Persistence.Data;
+using AuthServiceIN6BM.Api.Middlewares;
 using AuthServiceIN6BM.Api.Extensions;
 using AuthServiceIN6BM.Api.ModelBinders;
 using Serilog;
@@ -23,6 +24,9 @@ builder.Services.AddControllers(options =>
 });
 
 builder.Services.AddApplicationService(builder.Configuration);
+builder.Services.AddApiDocumentation();
+builder.Services.AddJwtAuthentication(builder.Configuration);
+builder.Services.AddRateLimitingPolicies();
 
 var app = builder.Build();
 
@@ -59,14 +63,16 @@ app.UseSecurityHeaders(policies => policies
     .AddCustomHeader("Cache-Control", "no-store, no-cache, must-revalidate, private")
 );
 
+
 //Global exception handling
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 // Core middLewares
 app.UseHttpsRedirection();
 app.UseCors("DefaultCorsPolicy");
- //   app.UserRateLimiter();
- //   app.UserAuthentication();
- //   app.UserAuthorization();
+app.UseRateLimiter();
+app.UseAuthentication();
+app.UseAuthorization();
 app.MapControllers();
 app.MapHealthChecks("/health");
 

@@ -36,7 +36,7 @@ public static class UuidGenerator
     /*agregamosnuestro rol aleatorio*/
     public static string GenerateRoleId()
     {
-        return $"rol_{GenerateRoleId}";
+        return $"rol_{GenerateShorUUID()}";
 
     }
 

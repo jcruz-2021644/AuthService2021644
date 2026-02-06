@@ -39,7 +39,7 @@ public class UserRepository(ApplicationDBContext context) : IUserRepository
             .Include(u => u.UserPasswordReset)
             .Include(u => u.UserRoles)
                 .ThenInclude(ur => ur.Role)
-            .FirstOrDefaultAsync(u => EF.Functions.ILike(u.UserName, username));
+            .FirstOrDefaultAsync(u => EF.Functions.ILike(u.Username, username));
     }
 
     public async Task<User?> GetByEmailVerificationTokenAsync(string token)
@@ -98,7 +98,7 @@ public class UserRepository(ApplicationDBContext context) : IUserRepository
     public async Task<bool> ExistsByUserNameAsync(string username)
     {
         return await context.Users
-            .AnyAsync(u => EF.Functions.ILike(u.UserName, username));
+            .AnyAsync(u => EF.Functions.ILike(u.Username, username));
     }
 
     public async Task UpdateUserRoleAsync(string userId, string roleId)

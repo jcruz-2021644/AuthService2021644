@@ -10,7 +10,7 @@ public class AuthResponseDto
 
     public UserDetailsDto UserDetails { get; set; } = new();
 
-    public DateTime ExpireAt { get; set; }
+    public DateTime ExpiresAt { get; set; }
 
 
 }

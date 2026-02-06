@@ -4,9 +4,9 @@ namespace AuthServiceIN6BM.Application.Interfaces;
 
 public interface IUserManagementService
 {
-    Task<UserReposnseDto> UpdateUserRolAsync(string userId, string roleName);
+    Task<UserResponseDto> UpdateUserRoleAsync(string userId, string roleName);
     Task<IReadOnlyList<string>> GetUserRolesAsync(string userId);
 
-    Task<IReadOnlyList<UserReposnseDto>> GetUserByRoleAsync(string roleName);
+    Task<IReadOnlyList<UserResponseDto>> GetUsersByRoleAsync(string roleName);
 
 }

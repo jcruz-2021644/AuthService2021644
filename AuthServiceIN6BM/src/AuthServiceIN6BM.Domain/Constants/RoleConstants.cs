@@ -7,5 +7,5 @@ public static class RoleConstants
     public const string USER_ROLE = "USER_ROLE";
 
 /*lista para mostrar los tipos de roles que hay en el sistema*/
-    public static readonly string[] AllowedRole = [ADMIN_ROLE, USER_ROLE];
+    public static readonly string[] AllowedRoles = [ADMIN_ROLE, USER_ROLE];
     }

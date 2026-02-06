@@ -86,21 +86,21 @@ namespace AuthServiceIN6BM.Persistence.Migrations
                         .HasDefaultValue(false)
                         .HasColumnName("status");
 
-                    b.Property<string>("SurName")
+                    b.Property<string>("Surname")
                         .IsRequired()
                         .HasMaxLength(25)
                         .HasColumnType("character varying(25)")
-                        .HasColumnName("sur_name");
+                        .HasColumnName("surname");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("updated_at");
 
-                    b.Property<string>("UserName")
+                    b.Property<string>("Username")
                         .IsRequired()
                         .HasMaxLength(25)
                         .HasColumnType("character varying(25)")
-                        .HasColumnName("user_name");
+                        .HasColumnName("username");
 
                     b.HasKey("Id")
                         .HasName("pk_users");
@@ -109,9 +109,9 @@ namespace AuthServiceIN6BM.Persistence.Migrations
                         .IsUnique()
                         .HasDatabaseName("ix_users_email");
 
-                    b.HasIndex("UserName")
+                    b.HasIndex("Username")
                         .IsUnique()
-                        .HasDatabaseName("ix_users_user_name");
+                        .HasDatabaseName("ix_users_username");
 
                     b.ToTable("users", (string)null);
                 });

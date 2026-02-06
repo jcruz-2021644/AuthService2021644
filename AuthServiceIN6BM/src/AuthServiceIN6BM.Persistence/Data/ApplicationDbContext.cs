@@ -63,10 +63,10 @@ public class ApplicationDBContext(DbContextOptions<ApplicationDBContext> options
             entity.Property(e => e.Name)
             .IsRequired()
             .HasMaxLength(25);
-            entity.Property(e => e.SurName)
+            entity.Property(e => e.Surname)
             .IsRequired()
             .HasMaxLength(25);
-            entity.Property(e => e.UserName)
+            entity.Property(e => e.Username)
             .IsRequired();
             entity.Property(e => e.Email)
             .IsRequired();
@@ -78,7 +78,7 @@ public class ApplicationDBContext(DbContextOptions<ApplicationDBContext> options
             entity.Property(e => e.CreatedAt)
             .IsRequired();
             entity.Property(e => e.UpdatedAt).IsRequired();
-            entity.HasIndex(e => e.UserName).IsUnique();
+            entity.HasIndex(e => e.Username).IsUnique();
             entity.HasIndex(e => e.Email).IsUnique();
 
             entity.HasOne(e => e.UserProfile)
