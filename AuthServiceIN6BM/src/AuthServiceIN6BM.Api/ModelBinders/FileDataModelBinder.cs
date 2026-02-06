@@ -9,6 +9,7 @@ public class FileDataModelBinder : IModelBinder
     public Task BindModelAsync(ModelBindingContext bindingContext)
     {
         ArgumentNullException.ThrowIfNull(bindingContext);
+
         if (!typeof(IFileData).IsAssignableFrom(bindingContext.ModelType))
         {
             return Task.CompletedTask;
@@ -16,24 +17,31 @@ public class FileDataModelBinder : IModelBinder
 
         var request = bindingContext.HttpContext.Request;
 
-        var file = request.From.Files.GetFiles(bindingContext.FileName);
-
-        if (file != null && file.Length > 0)
+        if (!request.HasFormContentType)
         {
-            var fileData = new FormFileAdapter(file);
+            bindingContext.Result = ModelBindingResult.Success(null);
+            return Task.CompletedTask;
+        }
+
+        var files = request.Form.Files.GetFiles(bindingContext.FieldName);
+
+        if (files.Count > 0)
+        {
+            var fileData = new FormFileAdapter(files.First());
             bindingContext.Result = ModelBindingResult.Success(fileData);
         }
         else
         {
             bindingContext.Result = ModelBindingResult.Success(null);
         }
+
         return Task.CompletedTask;
     }
 
 }
 
 
-public class FileDataModelBinderProvinder : IModelBinderProvider
+public class FileDataModelBinderProvider : IModelBinderProvider
 {
     public IModelBinder? GetBinder(ModelBinderProviderContext context)
     {
@@ -41,6 +49,6 @@ public class FileDataModelBinderProvinder : IModelBinderProvider
         {
             return new FileDataModelBinder();
         }
-        return null; 
+        return null;
     }
 }

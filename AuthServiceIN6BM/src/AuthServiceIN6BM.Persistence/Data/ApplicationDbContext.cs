@@ -2,7 +2,7 @@ using AuthServiceIN6BM.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
-namespace AuthServiceIN6BM.Presistence.Data;
+namespace AuthServiceIN6BM.Persistence.Data;
 
 public class ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : DbContext(options)
 {

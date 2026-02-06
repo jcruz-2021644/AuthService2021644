@@ -8,21 +8,21 @@ using Microsoft.AspNetCore.Hosting.Server.Features;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.host.UseSerilog((context, services, loggerConfiguration) => loggerConfiguration
-.ReadFrom.configuration(context.Configuration)
-.ReadFrom.SErvices(services));
+builder.Host.UseSerilog((context, services, loggerConfiguration) => loggerConfiguration
+.ReadFrom.Configuration(context.Configuration)
+.ReadFrom.Services(services));
 
 
 builder.Services.AddControllers(options =>
 {
-    options.ModelBinderProvider.Insert(0, new FileDataBinderProvider());
+    options.ModelBinderProviders.Insert(0, new FileDataModelBinderProvider());
 })
 .AddJsonOptions(o =>
 {
     o.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
 });
 
-builder.Services.AddApplicationService(builder.configuration);
+builder.Services.AddApplicationService(builder.Configuration);
 
 var app = builder.Build();
 
@@ -63,12 +63,12 @@ app.UseSecurityHeaders(policies => policies
 
 // Core middLewares
 app.UseHttpsRedirection();
-app.UserCors("DefaultCorsPolicy");
+app.UseCors("DefaultCorsPolicy");
  //   app.UserRateLimiter();
  //   app.UserAuthentication();
  //   app.UserAuthorization();
 app.MapControllers();
-app.MapHelthChechks("/health");
+app.MapHealthChecks("/health");
 
 
 app.MapGet("/health", () =>
@@ -78,7 +78,7 @@ app.MapGet("/health", () =>
         status = "Healthy",
         timestamps = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ")
     };
-    return Results.ok(response);
+    return Results.Ok(response);
 });
 
 // Startup log: addresses and health endpoint
@@ -113,7 +113,7 @@ app.Lifetime.ApplicationStarted.Register(() =>
 // Initialize database and seed data
 using (var scope = app.Services.CreateScope())
 {
-    var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    var context = scope.ServiceProvider.GetRequiredService<ApplicationDBContext>();
     var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
 
     try

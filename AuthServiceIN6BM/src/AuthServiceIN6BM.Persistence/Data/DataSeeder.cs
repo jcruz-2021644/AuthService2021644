@@ -2,7 +2,7 @@ using AuthServiceIN6BM.Domain.Entities;
 using AuthServiceIN6BM.Application.Services;
 using AuthServiceIN6BM.Domain.Constants;
 using Microsoft.EntityFrameworkCore;
-using AuthServiceIN6BM.Presistence.Data;
+using AuthServiceIN6BM.Persistence.Data;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq.Expressions;
 

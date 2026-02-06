@@ -1,8 +1,7 @@
 using AuthServiceIN6BM.Application.Services;
 using AuthServiceIN6BM.Domain.Entities;
-using AuthServiceIN6BM.Domain.Interface;
+using AuthServiceIN6BM.Domain.Interfaces;
 using AuthServiceIN6BM.Persistence.Data;
-using AuthServiceIN6BM.Presistence.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace AuthServiceIN6BM.Persistence.Repositories;
